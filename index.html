@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copypaste - takrorlovchi | Demo</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="./index.html" class="header__brand" title="Copypaste">
+                <img src="./img/copypaste.png" alt="Copypaste Logo">
+            </a>
+            <a href="https://youtube.com/@fayozhons" class="btn d-none d-md-inline-block">YouTube</a>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section container d-flex align-items-center justify-content-center flex-column">
+        <h1 class="heading">
+            <span>Copy</span>paste
+        </h1>
+        <h3 class="title">takrorlovchi</h3>
+        <div class="main-section__inputs">
+            <input type="text" name="text" id="text" maxlength="60" placeholder="bu yerga yozing..." value="Salom, hammaga!">
+            <input type="number" name="iterationNum" id="iterationNum" min="1" max="1000" value="100" placeholder="son">
+            <label for="iterationNum" class="d-none d-md-inline-block">marta</label>
+        </div>
+        <button class="btn" id="actionBtn">
+            <i class="fa-solid fa-bolt"></i>
+            boshla
+        </button>
+
+        <div class="row align-items-center justify-content-center">
+            <div class="style card col-11 col-md-8 col-lg-4">
+                <h3>#1 Usul</h3>
+                <textarea readonly class="style-0">copypaste</textarea>
+                <button class="btn style-btn-0">
+                    <i class="fa-regular fa-clone"></i>
+                    nusxa
+                </button>
+            </div>
+            <div class="style card col-11 col-md-8 col-lg-4 primary">
+                <h3>#2 Usul</h3>
+                <textarea readonly class="style-1">copypaste 1</textarea>
+                <button class="btn style-btn-1">
+                    <i class="fa-regular fa-clone"></i>
+                    nusxa
+                </button>
+            </div>
+            <div class="style card col-11 col-md-8 col-lg-4">
+                <h3>#3 Usul</h3>
+                <textarea readonly class="style-2">1 copypaste</textarea>
+                <button class="btn style-btn-2">
+                    <i class="fa-regular fa-clone"></i>
+                    nusxa
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="footer__info col-8 col-lg-10">
+                    <h3>
+                        2022 | Copypaste <a href="https://youtube.com/@fayozhons" class="anchor">@fayozhons</a> tomonidan
+                    </h3>
+                </div>
+                <div class="footer__social-links col-8 col-lg-2">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/app.js"></script>
+</body>
+</html>

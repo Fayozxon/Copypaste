@@ -1,0 +1,203 @@
+// sass style.scss style.css --watch
+@use "./variables" as var;
+
+// Fonts
+
+// Core
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Console', monospace;
+    font-weight: 300;
+    color: var.$dark;
+}
+
+// Components
+.btn {
+    font-size: 17px;
+    color: var.$white;
+    text-decoration: none;
+    text-transform: lowercase;
+    background-color: var.$blue;
+    padding: 10px 25px;
+    border: 2px solid var.$blue;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var.$ease;
+
+    &:active {
+        color: var.$dark;
+        background-color: var.$white;
+
+        i {
+            color: var.$dark;
+        }
+    }
+
+    i {
+        color: var.$white;
+    }
+}
+
+.anchor {
+    color: var.$dark;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.title {
+    font-size: 63px;
+}
+
+.body-text {
+    font-size: 16px;
+    color: var.$grey;
+    line-height: 150%;
+}
+
+// Header
+.header {
+    padding: 20px 0;
+    box-shadow: var.$light-shadow;
+
+    &__brand img {
+        width: 140px;
+    }
+}
+
+// Main Section
+.main-section {
+    padding-top: 60px;
+    padding-bottom: 160px;
+
+    .heading {
+        font-size: 97px;
+        text-transform: uppercase;
+        
+        span {
+            color: var.$blue;
+        }
+    }
+
+    .title {
+        font-size: 33px;
+    }
+
+    &__inputs {
+        padding-top: 40px;
+        padding-bottom: 30px;
+
+        input {
+            padding: 15px 20px;
+            font-size: 15px;
+            color: var.$blue;
+            border-radius: 50px;
+            border: 2px solid var.$blue;
+            outline: none;
+            transition: var.$ease;
+
+            &:focus {
+                border-color: var.$dark;
+            }
+        }
+    }
+
+    .row {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 270px;
+        margin: 20px;
+        padding: 30px;
+        background: var.$light;
+        border-radius: 10px;
+
+        &.primary {
+            background: var.$blue;
+
+            h3 {
+                color: var.$white;
+            }
+
+            textarea {
+                color: var.$white;
+            }
+
+            .btn {
+                border-color: var.$white;
+            }
+        }
+
+        h3 {
+            font-size: 25px;
+            color: var.$blue;
+        }
+
+        textarea {
+            text-align: center;
+            width: 100%;
+            height: 120px;
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 100%;
+            color: var.$grey;
+            background: none;
+            border: none;
+            outline: none;
+            overflow: hidden;
+        }
+    }
+}
+
+.footer {
+    padding: 40px 0;
+    background: var.$light;
+
+    &__info h3 {
+        color: var.$grey;
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    &__social-links a {
+        padding: 0 7px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
+
+// RWD Styles
+@media only screen and (max-width: 991px) {
+    .footer {
+        text-align: center;
+
+        h3 {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header__brand img {
+        width: 100px;
+    }
+
+    .main-section {
+        .heading {
+            font-size: 50px;
+        }
+        .title {
+            font-size: 20px;
+        }
+    }
+}

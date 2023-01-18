@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Console", monospace;
+  font-weight: 300;
+  color: #252525;
+}
+
+.btn {
+  font-size: 17px;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: lowercase;
+  background-color: #0090FF;
+  padding: 10px 25px;
+  border: 2px solid #0090FF;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:active {
+  color: #252525;
+  background-color: #FFF;
+}
+.btn:active i {
+  color: #252525;
+}
+.btn i {
+  color: #FFF;
+}
+
+.anchor {
+  color: #252525;
+  text-decoration: underline;
+}
+.anchor:hover {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 63px;
+}
+
+.body-text {
+  font-size: 16px;
+  color: #707070;
+  line-height: 150%;
+}
+
+.header {
+  padding: 20px 0;
+  box-shadow: #EFF0F4 0 5px 15px;
+}
+.header__brand img {
+  width: 140px;
+}
+
+.main-section {
+  padding-top: 60px;
+  padding-bottom: 160px;
+}
+.main-section .heading {
+  font-size: 97px;
+  text-transform: uppercase;
+}
+.main-section .heading span {
+  color: #0090FF;
+}
+.main-section .title {
+  font-size: 33px;
+}
+.main-section__inputs {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.main-section__inputs input {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: #0090FF;
+  border-radius: 50px;
+  border: 2px solid #0090FF;
+  outline: none;
+  transition: 0.3s;
+}
+.main-section__inputs input:focus {
+  border-color: #252525;
+}
+.main-section .row {
+  width: 100%;
+  padding-top: 40px;
+}
+.main-section .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 270px;
+  margin: 20px;
+  padding: 30px;
+  background: #EFF0F4;
+  border-radius: 10px;
+}
+.main-section .card.primary {
+  background: #0090FF;
+}
+.main-section .card.primary h3 {
+  color: #FFF;
+}
+.main-section .card.primary textarea {
+  color: #FFF;
+}
+.main-section .card.primary .btn {
+  border-color: #FFF;
+}
+.main-section .card h3 {
+  font-size: 25px;
+  color: #0090FF;
+}
+.main-section .card textarea {
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 100%;
+  color: #707070;
+  background: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+.footer {
+  padding: 40px 0;
+  background: #EFF0F4;
+}
+.footer__info h3 {
+  color: #707070;
+  font-size: 16px;
+  line-height: 140%;
+}
+.footer__social-links a {
+  padding: 0 7px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    text-align: center;
+  }
+  .footer h3 {
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header__brand img {
+    width: 100px;
+  }
+  .main-section .heading {
+    font-size: 50px;
+  }
+  .main-section .title {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
