@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copypaste - takrorlovchi | Demo</title>
+    <title>Copy1paste - takrorlovchi | Demo</title>
     <!-- Links -->
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -22,14 +22,14 @@
     </header>
 
     <!-- Main Section -->
-    <section class="main-section container d-flex align-items-center justify-content-center flex-column">
+    <section class="main-section container d-flex align-items-center flex-column">
         <h1 class="heading">
-            <span>Copy</span>paste
+            <span>Copy1</span>paste
         </h1>
         <h3 class="title">takrorlovchi</h3>
         <div class="main-section__inputs">
-            <input type="text" name="text" id="text" maxlength="60" placeholder="bu yerga yozing..." value="Salom, hammaga!">
-            <input type="number" name="iterationNum" id="iterationNum" min="1" max="1000" value="100" placeholder="son">
+            <input type="text" name="text" id="text" maxlength="60" placeholder="bu yerga yozing..." value="copy1paste">
+            <input type="number" name="iterationNum" id="iterationNum" min="1" max="10000" value="100" placeholder="son">
             <label for="iterationNum" class="d-none d-md-inline-block">marta</label>
         </div>
         <button class="btn" id="actionBtn">
@@ -41,7 +41,7 @@
             <div class="style card col-11 col-md-8 col-lg-4">
                 <h3>#1 Usul</h3>
                 <textarea readonly class="style-0">copypaste</textarea>
-                <button class="btn style-btn-0">
+                <button class="btn style-btn-0 copy-btn">
                     <i class="fa-regular fa-clone"></i>
                     nusxa
                 </button>
@@ -49,7 +49,7 @@
             <div class="style card col-11 col-md-8 col-lg-4 primary">
                 <h3>#2 Usul</h3>
                 <textarea readonly class="style-1">copypaste 1</textarea>
-                <button class="btn style-btn-1">
+                <button class="btn style-btn-1 copy-btn">
                     <i class="fa-regular fa-clone"></i>
                     nusxa
                 </button>
@@ -57,12 +57,25 @@
             <div class="style card col-11 col-md-8 col-lg-4">
                 <h3>#3 Usul</h3>
                 <textarea readonly class="style-2">1 copypaste</textarea>
-                <button class="btn style-btn-2">
+                <button class="btn style-btn-2 copy-btn">
                     <i class="fa-regular fa-clone"></i>
                     nusxa
                 </button>
             </div>
         </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section container d-flex align-items-center justify-content-center flex-column">
+        <h2 class="title">Sayt sizga yoqdimi?</h2>
+        <p class="body-text">
+            Sayt haqida fikrlaringizni va takliflaringizni bizga yuboring, biz uchun har bir fikr muhim.
+        </p>
+        <form class="d-flex align-items-center justify-content-center flex-column" method="POST" netlify>
+            <label for="message">Fikringiz:</label>
+            <textarea name="message" id="message" class="form-section__msg-box" cols="30" rows="7" placeholder="bu yerga yozing..."></textarea>
+            <button type="submit" class="btn">yuborish</button>
+        </form>
     </section>
 
     <!-- Footer -->
@@ -71,17 +84,17 @@
             <div class="row align-items-center justify-content-center">
                 <div class="footer__info col-8 col-lg-10">
                     <h3>
-                        2022 | Copypaste <a href="https://youtube.com/@fayozhons" class="anchor">@fayozhons</a> tomonidan
+                        2022 | Copy1paste <a href="https://instagram.com/fayozhons" class="anchor" target="_blank">@fayozhons</a> tomonidan
                     </h3>
                 </div>
                 <div class="footer__social-links col-8 col-lg-2">
-                    <a href="#">
+                    <a href="https://instagram.com/fayozhons" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://youtube.com/@fayozhons" target="_blank">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://t.me/fayozhons" target="_blank">
                         <i class="fa-brands fa-telegram"></i>
                     </a>
                 </div>
