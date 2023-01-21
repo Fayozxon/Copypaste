@@ -94,15 +94,22 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 20px 0;
-  box-shadow: #EFF0F4 0 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 10px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 100;
 }
 .header__brand img {
   width: 140px;
 }
 
 .main-section {
-  padding-top: 60px;
+  padding-top: 150px;
   padding-bottom: 160px;
 }
 .main-section .heading {
@@ -216,6 +223,61 @@
   border-color: #252525;
 }
 
+.rec-section {
+  padding-bottom: 140px;
+  text-align: center;
+}
+.rec-section .body-text {
+  width: 400px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.rec-section__card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 10px 20px;
+  margin: 15px 0;
+}
+.rec-section__card img {
+  width: 100%;
+  border-radius: 15px;
+}
+.rec-section__card::after {
+  content: "H";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 23px;
+  color: #FFF;
+  background: #252525;
+  border-radius: 50%;
+}
+.rec-section__card::before {
+  content: "Ko'proq";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+  z-index: 1;
+  transform: translateY(100px);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 10px 20px;
+}
+.rec-section__card:hover::before {
+  transform: translateY(0);
+}
+
 .footer {
   padding: 40px 0;
   background: #EFF0F4;
@@ -252,7 +314,7 @@
   .main-section .title {
     font-size: 20px;
   }
-  .form-section .body-text, .form-section__msg-box {
+  .form-section .body-text, .form-section__msg-box, .rec-section .body-text, .rec-section__msg-box {
     width: 90%;
   }
 }
