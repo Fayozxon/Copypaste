@@ -4,121 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy1paste - takrorlovchi | Demo</title>
+    <title>COPY1PASTE - takrorlovchi | Demo</title>
     <!-- Links -->
-    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="./index.html" class="header__brand" title="Copypaste">
-                <img src="./img/copypaste.png" alt="Copypaste Logo">
+            <a href="./index.html" class="header__brand">
+                <img src="./img/logo.png" alt="Copy1paste Logo" class="light">
+                <img src="./img/logo-dark.png" alt="Copy1paste Logo" class="dark">
             </a>
-            <a href="https://youtube.com/@fayozhons" class="btn d-none d-md-inline-block">YouTube</a>
+            <button class="header__theme-switcher" id="themeSwitcherBtn">
+                <i class="fa-solid fa-moon light"></i>
+                <i class="fa-solid fa-sun dark"></i>
+            </button>
         </div>
     </header>
 
     <!-- Main Section -->
-    <section class="main-section container d-flex align-items-center flex-column">
-        <h1 class="heading">
-            <span>Copy1</span>paste
-        </h1>
-        <h3 class="title">takrorlovchi</h3>
-        <div class="main-section__inputs">
-            <input type="text" name="text" id="text" maxlength="60" placeholder="bu yerga yozing..." value="copy1paste">
-            <input type="number" name="iterationNum" id="iterationNum" min="1" max="10000" value="100" placeholder="son">
-            <label for="iterationNum" class="d-none d-md-inline-block">marta</label>
-        </div>
-        <button class="btn" id="actionBtn">
-            <i class="fa-solid fa-bolt"></i>
-            boshla
-        </button>
-
-        <div class="row align-items-center justify-content-center">
-            <div class="style card col-11 col-md-8 col-lg-4">
-                <h3>#1 Usul</h3>
-                <textarea readonly class="style-0">copypaste</textarea>
-                <button class="btn style-btn-0 copy-btn">
-                    <i class="fa-regular fa-clone"></i>
-                    nusxa
-                </button>
+    <section class="main-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Info -->
+                <div class="col-11 col-sm-10 col-md-6 col-lg-5 col-xl-4 main-section__info">
+                    <h1 class="heading-1">ZERIKISH?</h1>
+                    <p class="body-text">
+                        Saytni sinab ko'ring. Istalgan so'z yoki gapni kiriting va uni istalgancha takrorlang. Nusxalang va do'stlaringizga yuboring!
+                    </p>
+                    <a href="#playground" class="btn try-it-btn">Sinab ko'ring</a>
+                    <a href="#guide" class="btn btn-secondary guide-btn">Yo'riqnoma</a>
+                    <div class="main-section__info--img">
+                        <img src="./img/main-image-light.png" alt="Main Image" class="light">
+                        <img src="./img/main-image-dark.png" alt="Main Image" class="dark">
+                    </div>
+                    <div class="main-section__info--contributer-box">
+                        <h3>Hamkor</h3>
+                        <p>
+                            instagram: <a href="#">@fayozhons</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Playground -->
+                <div class="col-11 col-sm-10 col-md-6 col-lg-5 col-xl-4 main-section__playground" id="playground">
+                    <h2 class="heading-2">O'yin maydonchasi</h2>
+                    <div class="input-box">
+                        <input class="input" type="text" name="text" id="textForIteration" placeholder="birinchi matn..." maxlength="100" value="ajoyib">
+                        <input class="input" type="number" name="number" id="iterationNumber" placeholder="son" value="100" min="1" max="10000">
+                        <input class="input" type="text" name="text" id="nextTextForIteration" placeholder="keyingi matn..." maxlength="100" value="">
+                        <button class="input-box__num-btn num-btn" id="numTenBtn">O'n</button>
+                        <button class="input-box__num-btn num-btn" id="numHundredBtn">Yuz</button>
+                        <button class="input-box__num-btn num-btn" id="numThousandBtn">Ming</button>
+                        <button class="btn" id="iterateBtn">
+                            Boshlash
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="copy-box" id="copyBox">
+                        <h3 class="body-text" id="copyBoxTitle">10 marta "qoyilmaqom"</h3>
+                        <textarea class="body-text" id="copyBoxText">qoyilmaqom 1 qoyilmaqom 2 qoyilmaqom 3 qoyilmaqom 4 qoyilmaqom 5 qoyilmaqom 6 qoyilmaqom 7 qoyilmaqom 8qoyilmaqom 1 qoyilmaqom 2 qoyilmaqom 3 qoyilmaqom 4 qoyilmaqom 5 qoyilmaqom 6 qoyilmaqom 7 qoyilmaqom 8</textarea>
+                        <button class="btn" id="copyBtn">
+                            Nusxalash
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                    </div>
+                    <!-- Settings -->
+                    <h2 class="heading-2 settings-heading">Sozlamalar</h2>
+                    <div class="main-section__playground--togglers">
+                        <label class="toggler">
+                            Yangi qatordan yozish
+                            <input type="checkbox" name="settings" id="addNewLineToggle" class="toggle" checked>
+                        </label>
+                        <label class="toggler">
+                            Oxiriga raqam qo'shish
+                            <input type="checkbox" name="settings" id="addNumAfterToggle" class="toggle" checked>
+                        </label>
+                        <label class="toggler">
+                            Boshiga raqam qo'shish
+                            <input type="checkbox" name="settings" id="addNumBeforeToggle" class="toggle">
+                        </label>
+                    </div>
+                </div>
+                <!-- Guide -->
+                <div class="col-11 col-sm-10 col-md-6 col-lg-5 col-xl-4 main-section__guide" id="guide">
+                    <iframe src="https://www.youtube.com/embed/eMd1RdzNfGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="main-section__guide--frame guide-frame"></iframe>
+                    <h2 class="heading-2">Yo'riqnoma</h2>
+                    <p class="body-text">
+                        Saytda siz yozgan gapni ko'pi bilan 1,000 martagacha, jami 4 xil usulda takrorlab olishingiz mumkin. So'zlarni takrorlash uchun maksimal qiymat 10,000 ammo, tavsiya qilinmaydi!
+                    </p>
+                    <a href="#playground" class="btn try-it-btn">Sinab ko'ring</a>
+                    <!-- Share box -->
+                    <h2 class="heading-2 share-heading">Saytni ulashing</h2>
+                    <div class="share-box">
+                        <code>copy1paste.netlify.app</code>
+                        <button class="btn" id="shareBtn">
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                    </div>
+                    <!-- Author Box -->
+                    <h2 class="heading-2">Dasturchi va muallif</h2>
+                    <div class="author-box">
+                        <img src="./img/fayozhons-logo.jpg" alt="fayozhons logo" class="author-box__img">
+                        <div class="author-box__info">
+                            <h5 class="job">Frontend dasturchi</h5>
+                            <h3 class="name">Shirinov Fayozxon</h3>
+                            <div class="author-box__info--links">
+                                <a href="https://t.me/fayozhons">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </a>
+                                <a href="https://www.instagram.com/fayozhons">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@fayozhons">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="style card col-11 col-md-8 col-lg-4 primary">
-                <h3>#2 Usul</h3>
-                <textarea readonly class="style-1">copypaste 1</textarea>
-                <button class="btn style-btn-1 copy-btn">
-                    <i class="fa-regular fa-clone"></i>
-                    nusxa
-                </button>
-            </div>
-            <div class="style card col-11 col-md-8 col-lg-4">
-                <h3>#3 Usul</h3>
-                <textarea readonly class="style-2">1 copypaste</textarea>
-                <button class="btn style-btn-2 copy-btn">
-                    <i class="fa-regular fa-clone"></i>
-                    nusxa
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="form-section container d-flex align-items-center justify-content-center flex-column">
-        <h2 class="title">Sayt sizga yoqdimi?</h2>
-        <p class="body-text">
-            Sayt haqida fikrlaringizni va takliflaringizni bizga yuboring, biz uchun har bir fikr muhim.
-        </p>
-        <form class="d-flex align-items-center justify-content-center flex-column" method="POST" action="./index.html" netlify>
-            <label for="message">Fikringiz:</label>
-            <textarea name="message" id="message" class="form-section__msg-box" cols="30" rows="7" placeholder="bu yerga yozing..."></textarea>
-            <button type="submit" class="btn">yuborish</button>
-        </form>
-    </section>
-
-    
-    <!-- Rec Section -->
-    <section class="rec-section container d-flex align-items-center justify-content-center flex-column">
-        <h2 class="title">Tavsiyalar</h2>
-        <p class="body-text">
-            <a href="https://fake-chat.netlify.app" class="anchor">FakeChat</a>'dan foydalaning, va istaganingizcha do'stlaringiz bilan hazil qiling.
-        </p>
-        <div class="row align-items-center justify-content-center">
-            <a href="https://fake-chat.netlify.app" class="rec-section__card col-8 col-md-5 col-lg-3">
-                <img src="./img/fake-chat.jpg" alt="FakeChat Website Image">
-            </a>
-            <a href="https://kunduziy.netlify.app" class="rec-section__card col-8 col-md-5 col-lg-3">
-                <img src="./img/kunduziy.jpg" alt="Kunduziy Website Image">
-            </a>
-            <a href="https://myburgerking.netlify.app" class="rec-section__card col-8 col-md-5 col-lg-3">
-                <img src="./img/burger-king.jpg" alt="Burger King Website Image">
-            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="footer__info col-8 col-lg-10">
-                    <h3>
-                        2022 | Copy1paste <a href="https://instagram.com/fayozhons" class="anchor" target="_blank">@fayozhons</a> tomonidan
-                    </h3>
-                </div>
-                <div class="footer__social-links col-8 col-lg-2">
-                    <a href="https://instagram.com/fayozhons" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://youtube.com/@fayozhons" target="_blank">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    <a href="https://t.me/fayozhons" target="_blank">
-                        <i class="fa-brands fa-telegram"></i>
-                    </a>
-                </div>
-            </div>
+            <p class="body-text">2023 | COPY1PASTE</p>
         </div>
     </footer>
 
