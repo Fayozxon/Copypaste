@@ -1,9 +1,25 @@
 'use strict';
 // Theme Switcher
+function changeTheme(matches) {
+    if (matches) {
+        document.body.classList.add('dark');
+        themeSwitcherBtn.classList.add('active');
+      } else {
+        document.body.classList.remove('dark');
+        themeSwitcherBtn.classList.remove('active');
+      }
+}
+
 let themeSwitcherBtn = document.getElementById('themeSwitcherBtn');
 themeSwitcherBtn.addEventListener('click', (e) => {
     document.body.classList.toggle('dark');
     themeSwitcherBtn.classList.toggle('active');
+});
+
+changeTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',({ matches }) => {
+  changeTheme(matches);
 });
 
 // Indicating Element Scripts
@@ -25,13 +41,6 @@ guideBtn.addEventListener('click', () => {
             box.classList.remove('transform-animation');
         }, 1000);
 });
-
-// Copy Function
-function copyIt(txtInput) {
-    txtInput.select();
-    txtInput.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(txtInput.value);
-}
 
 // Playground Scripts
 let textForIteration = document.getElementById('textForIteration'),
@@ -133,15 +142,39 @@ function checkInputs() {
 let iterateBtn = document.getElementById('iterateBtn');
 iterateBtn.addEventListener('click', checkInputs);
 
+
+// Copy Function
+function copyIt(txtInput) {
+    txtInput.select();
+    txtInput.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(txtInput.value);
+    // txtInput.select();
+    // txtInput.setSelectionRange(0, 99999);
+    // txtInput.execCommand('copy');
+}
+
 // Copy Text
-document.querySelector('#copyBtn').addEventListener('click', () => {
-    copyIt(document.querySelector('#copyBoxText'));
+document.querySelector('#copyBtn').addEventListener('click', async () => {
+    try {
+        await copyIt(document.querySelector('#copyBoxText'));
+    } catch (err) {
+        alert(`Xatolik: ${err}`);
+    }
 });
 
-// Share Button Scripts
-let shareLink = document.createElement('input');
-shareLink.value = 'https://copy1paste.netlify.app';
+// Sharing Scripts
+const shareData = {
+    title: 'COPY1PASTE',
+    text: 'So\'z va gaplarni, turli usulda, istalgancha takrorlang!',
+    url: 'https://copy1paste.netlify.app'
+}
 
-document.querySelector('#shareBtn').addEventListener('click', () => {
-    copyIt(shareLink);
+const shareBtn = document.querySelector('#shareBtn');
+
+shareBtn.addEventListener('click', async () => {
+    try {
+        await navigator.share(shareData);
+    } catch (err) {
+        alert(`Error: ${err}`);
+    }
 });
