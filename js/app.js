@@ -158,7 +158,7 @@ document.querySelector('#copyBtn').addEventListener('click', async () => {
     try {
         await copyIt(document.querySelector('#copyBoxText'));
     } catch (err) {
-        alert(`Xatolik: ${err}`);
+        alert(`Xatolik! Chrome brauzerida ocish tavsiya qilinadi yoki brauzeringizni yangilang!`);
     }
 });
 
@@ -171,10 +171,6 @@ const shareData = {
 
 const shareBtn = document.querySelector('#shareBtn');
 
-shareBtn.addEventListener('click', async () => {
-    try {
-        await navigator.share(shareData);
-    } catch (err) {
-        alert(`Error: ${err}`);
-    }
+shareBtn.addEventListener('click', () => {
+    navigator.share(shareData);
 });
